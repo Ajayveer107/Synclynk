@@ -1,0 +1,4 @@
+com.synclynk.test.app-androidTest-0 C:\projects\synclynk\android-app\app\build\generated\res\resValues\androidTest\debug
+com.synclynk.test.app-mergeDebugAndroidTestResources-1 C:\projects\synclynk\android-app\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.synclynk.test.app-mergeDebugAndroidTestResources-2 C:\projects\synclynk\android-app\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.synclynk.test.app-debugAndroidTest-3 C:\projects\synclynk\android-app\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

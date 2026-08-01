@@ -1,0 +1,3 @@
+<resources>
+    <style name="Theme.SyncLynk" parent="Theme.MaterialComponents.DayNight.NoActionBar" />
+</resources>

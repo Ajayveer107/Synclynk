@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Android blocks plain (non-HTTPS/WSS) network traffic by default since
+  API 28. SyncLynk intentionally uses plain ws:// on the local network
+  only (no internet-facing traffic, no accounts) - this config allows
+  that specific case instead of forcing TLS for a LAN-only sync tool.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>

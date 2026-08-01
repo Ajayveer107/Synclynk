@@ -1,0 +1,305 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.synclynk"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="34" />
+10
+11    <!-- LAN networking only - no internet account/backend calls -->
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:5:5-67
+12-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:5:22-64
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:6:5-79
+13-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:6:22-76
+14    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+14-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:7:5-76
+14-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:7:22-73
+15
+16    <!-- Camera mirroring -->
+17    <uses-permission android:name="android.permission.CAMERA" />
+17-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:10:5-65
+17-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:10:22-62
+18
+19    <uses-feature
+19-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:11:5-88
+20        android:name="android.hardware.camera.any"
+20-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:11:19-61
+21        android:required="true" />
+21-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:11:62-85
+22
+23    <!--
+24         Foreground services keep clipboard/notification sync alive
+25         while the app is backgrounded
+26    -->
+27    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+27-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:15:5-77
+27-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:15:22-74
+28    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+28-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:16:5-87
+28-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:16:22-84
+29    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CAMERA" />
+29-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:17:5-84
+29-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:17:22-81
+30    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+30-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:18:5-77
+30-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:18:22-74
+31
+32    <!--
+33         Only used on Android 9 and below for saving received files;
+34         Android 10+ uses MediaStore instead and ignores this.
+35    -->
+36    <uses-permission
+36-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:22:5-24:38
+37        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+37-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:23:9-65
+38        android:maxSdkVersion="28" />
+38-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:24:9-35
+39
+40    <permission
+40-->[androidx.core:core:1.13.1] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\de94a4b6ce243921614888240652f726\workspace\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+41        android:name="com.synclynk.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+41-->[androidx.core:core:1.13.1] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\de94a4b6ce243921614888240652f726\workspace\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+42        android:protectionLevel="signature" />
+42-->[androidx.core:core:1.13.1] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\de94a4b6ce243921614888240652f726\workspace\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+43
+44    <uses-permission android:name="com.synclynk.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
+44-->[androidx.core:core:1.13.1] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\de94a4b6ce243921614888240652f726\workspace\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+44-->[androidx.core:core:1.13.1] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\de94a4b6ce243921614888240652f726\workspace\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+45    <uses-feature
+45-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\e5a02277d0a0c86e392fd1be1e319b23\workspace\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:25:5-27:36
+46        android:name="android.hardware.camera"
+46-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\e5a02277d0a0c86e392fd1be1e319b23\workspace\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:26:9-47
+47        android:required="false" />
+47-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\e5a02277d0a0c86e392fd1be1e319b23\workspace\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:27:9-33
+48    <uses-feature
+48-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\e5a02277d0a0c86e392fd1be1e319b23\workspace\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:28:5-30:36
+49        android:name="android.hardware.camera.front"
+49-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\e5a02277d0a0c86e392fd1be1e319b23\workspace\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:29:9-53
+50        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
+50-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\e5a02277d0a0c86e392fd1be1e319b23\workspace\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:30:9-33
+51    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+52    <uses-feature
+52-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\e5a02277d0a0c86e392fd1be1e319b23\workspace\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:33:5-35:36
+53        android:name="android.hardware.camera.autofocus"
+53-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\e5a02277d0a0c86e392fd1be1e319b23\workspace\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:34:9-57
+54        android:required="false" />
+54-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\e5a02277d0a0c86e392fd1be1e319b23\workspace\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:35:9-33
+55    <uses-feature
+55-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\e5a02277d0a0c86e392fd1be1e319b23\workspace\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:36:5-38:36
+56        android:name="android.hardware.camera.flash"
+56-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\e5a02277d0a0c86e392fd1be1e319b23\workspace\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:37:9-53
+57        android:required="false" />
+57-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\e5a02277d0a0c86e392fd1be1e319b23\workspace\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:38:9-33
+58    <uses-feature
+58-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\e5a02277d0a0c86e392fd1be1e319b23\workspace\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:39:5-41:36
+59        android:name="android.hardware.screen.landscape"
+59-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\e5a02277d0a0c86e392fd1be1e319b23\workspace\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:40:9-57
+60        android:required="false" />
+60-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\e5a02277d0a0c86e392fd1be1e319b23\workspace\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:41:9-33
+61    <uses-feature
+61-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\e5a02277d0a0c86e392fd1be1e319b23\workspace\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:42:5-44:36
+62        android:name="android.hardware.wifi"
+62-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\e5a02277d0a0c86e392fd1be1e319b23\workspace\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:43:9-45
+63        android:required="false" />
+63-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\e5a02277d0a0c86e392fd1be1e319b23\workspace\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:44:9-33
+64
+65    <application
+65-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:26:5-71:19
+66        android:allowBackup="false"
+66-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:27:9-36
+67        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+67-->[androidx.core:core:1.13.1] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\de94a4b6ce243921614888240652f726\workspace\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
+68        android:debuggable="true"
+69        android:extractNativeLibs="false"
+70        android:icon="@mipmap/ic_launcher"
+70-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:28:9-43
+71        android:label="SyncLynk"
+71-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:30:9-33
+72        android:networkSecurityConfig="@xml/network_security_config"
+72-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:33:9-69
+73        android:roundIcon="@mipmap/ic_launcher_round"
+73-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:29:9-54
+74        android:supportsRtl="true"
+74-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:34:9-35
+75        android:testOnly="true"
+76        android:theme="@style/Theme.SyncLynk"
+76-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:31:9-46
+77        android:usesCleartextTraffic="true" >
+77-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:32:9-44
+78        <activity
+78-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:36:9-44:20
+79            android:name="com.synclynk.ui.MainActivity"
+79-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:37:13-44
+80            android:exported="true"
+80-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:38:13-36
+81            android:launchMode="singleTop" >
+81-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:39:13-43
+82            <intent-filter>
+82-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:40:13-43:29
+83                <action android:name="android.intent.action.MAIN" />
+83-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:41:17-69
+83-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:41:25-66
+84
+85                <category android:name="android.intent.category.LAUNCHER" />
+85-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:42:17-77
+85-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:42:27-74
+86            </intent-filter>
+87        </activity>
+88        <activity
+88-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:46:9-49:52
+89            android:name="com.synclynk.ui.CameraStreamActivity"
+89-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:47:13-52
+90            android:exported="false"
+90-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:48:13-37
+91            android:screenOrientation="portrait" />
+91-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:49:13-49
+92
+93        <!-- Keeps the WebSocket + clipboard watcher alive in the background -->
+94        <service
+94-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:52:9-55:56
+95            android:name="com.synclynk.net.SyncForegroundService"
+95-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:53:13-54
+96            android:exported="false"
+96-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:54:13-37
+97            android:foregroundServiceType="dataSync" />
+97-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:55:13-53
+98
+99        <!--
+100             Requires the user to manually enable it once under
+101             Settings > Apps > Special access > Notification access.
+102             Android does not allow this to be auto-granted; there is
+103             no way around that one permission screen.
+104        -->
+105        <service
+105-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:61:9-69:19
+106            android:name="com.synclynk.features.NotificationForwarderService"
+106-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:62:13-66
+107            android:exported="false"
+107-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:65:13-37
+108            android:label="SyncLynk Notification Mirror"
+108-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:63:13-57
+109            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" >
+109-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:64:13-87
+110            <intent-filter>
+110-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:66:13-68:29
+111                <action android:name="android.service.notification.NotificationListenerService" />
+111-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:67:17-99
+111-->C:\projects\synclynk\android-app\app\src\main\AndroidManifest.xml:67:25-96
+112            </intent-filter>
+113        </service>
+114        <service
+114-->[androidx.camera:camera-camera2:1.3.4] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\315279faa0374ceba8f22b47e67a105d\workspace\transformed\jetified-camera-camera2-1.3.4\AndroidManifest.xml:24:9-33:19
+115            android:name="androidx.camera.core.impl.MetadataHolderService"
+115-->[androidx.camera:camera-camera2:1.3.4] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\315279faa0374ceba8f22b47e67a105d\workspace\transformed\jetified-camera-camera2-1.3.4\AndroidManifest.xml:25:13-75
+116            android:enabled="false"
+116-->[androidx.camera:camera-camera2:1.3.4] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\315279faa0374ceba8f22b47e67a105d\workspace\transformed\jetified-camera-camera2-1.3.4\AndroidManifest.xml:26:13-36
+117            android:exported="false" >
+117-->[androidx.camera:camera-camera2:1.3.4] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\315279faa0374ceba8f22b47e67a105d\workspace\transformed\jetified-camera-camera2-1.3.4\AndroidManifest.xml:27:13-37
+118            <meta-data
+118-->[androidx.camera:camera-camera2:1.3.4] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\315279faa0374ceba8f22b47e67a105d\workspace\transformed\jetified-camera-camera2-1.3.4\AndroidManifest.xml:30:13-32:89
+119                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+119-->[androidx.camera:camera-camera2:1.3.4] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\315279faa0374ceba8f22b47e67a105d\workspace\transformed\jetified-camera-camera2-1.3.4\AndroidManifest.xml:31:17-103
+120                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+120-->[androidx.camera:camera-camera2:1.3.4] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\315279faa0374ceba8f22b47e67a105d\workspace\transformed\jetified-camera-camera2-1.3.4\AndroidManifest.xml:32:17-86
+121        </service>
+122
+123        <provider
+123-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\62a6751f6eeec022bdda3861c8dee411\workspace\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+124            android:name="androidx.startup.InitializationProvider"
+124-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\62a6751f6eeec022bdda3861c8dee411\workspace\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:25:13-67
+125            android:authorities="com.synclynk.androidx-startup"
+125-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\62a6751f6eeec022bdda3861c8dee411\workspace\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:26:13-68
+126            android:exported="false" >
+126-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\62a6751f6eeec022bdda3861c8dee411\workspace\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:27:13-37
+127            <meta-data
+127-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\62a6751f6eeec022bdda3861c8dee411\workspace\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+128                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+128-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\62a6751f6eeec022bdda3861c8dee411\workspace\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:30:17-75
+129                android:value="androidx.startup" />
+129-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\62a6751f6eeec022bdda3861c8dee411\workspace\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:31:17-49
+130            <meta-data
+130-->[androidx.lifecycle:lifecycle-process:2.8.1] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\bb66b017948b1163c7bedebabcd13dfd\workspace\transformed\jetified-lifecycle-process-2.8.1\AndroidManifest.xml:29:13-31:52
+131                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+131-->[androidx.lifecycle:lifecycle-process:2.8.1] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\bb66b017948b1163c7bedebabcd13dfd\workspace\transformed\jetified-lifecycle-process-2.8.1\AndroidManifest.xml:30:17-78
+132                android:value="androidx.startup" />
+132-->[androidx.lifecycle:lifecycle-process:2.8.1] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\bb66b017948b1163c7bedebabcd13dfd\workspace\transformed\jetified-lifecycle-process-2.8.1\AndroidManifest.xml:31:17-49
+133            <meta-data
+133-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\4ae0883b514c63882e15b052bac82f7c\workspace\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+134                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+134-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\4ae0883b514c63882e15b052bac82f7c\workspace\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+135                android:value="androidx.startup" />
+135-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\4ae0883b514c63882e15b052bac82f7c\workspace\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+136        </provider>
+137
+138        <uses-library
+138-->[androidx.window:window:1.0.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\0eab79acd79e6ccffa9fce625b624192\workspace\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
+139            android:name="androidx.window.extensions"
+139-->[androidx.window:window:1.0.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\0eab79acd79e6ccffa9fce625b624192\workspace\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
+140            android:required="false" />
+140-->[androidx.window:window:1.0.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\0eab79acd79e6ccffa9fce625b624192\workspace\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
+141        <uses-library
+141-->[androidx.window:window:1.0.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\0eab79acd79e6ccffa9fce625b624192\workspace\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
+142            android:name="androidx.window.sidecar"
+142-->[androidx.window:window:1.0.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\0eab79acd79e6ccffa9fce625b624192\workspace\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
+143            android:required="false" />
+143-->[androidx.window:window:1.0.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\0eab79acd79e6ccffa9fce625b624192\workspace\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+144
+145        <receiver
+145-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\4ae0883b514c63882e15b052bac82f7c\workspace\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+146            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+146-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\4ae0883b514c63882e15b052bac82f7c\workspace\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+147            android:directBootAware="false"
+147-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\4ae0883b514c63882e15b052bac82f7c\workspace\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+148            android:enabled="true"
+148-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\4ae0883b514c63882e15b052bac82f7c\workspace\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+149            android:exported="true"
+149-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\4ae0883b514c63882e15b052bac82f7c\workspace\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+150            android:permission="android.permission.DUMP" >
+150-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\4ae0883b514c63882e15b052bac82f7c\workspace\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+151            <intent-filter>
+151-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\4ae0883b514c63882e15b052bac82f7c\workspace\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+152                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+152-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\4ae0883b514c63882e15b052bac82f7c\workspace\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+152-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\4ae0883b514c63882e15b052bac82f7c\workspace\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+153            </intent-filter>
+154            <intent-filter>
+154-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\4ae0883b514c63882e15b052bac82f7c\workspace\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+155                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+155-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\4ae0883b514c63882e15b052bac82f7c\workspace\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+155-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\4ae0883b514c63882e15b052bac82f7c\workspace\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+156            </intent-filter>
+157            <intent-filter>
+157-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\4ae0883b514c63882e15b052bac82f7c\workspace\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+158                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+158-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\4ae0883b514c63882e15b052bac82f7c\workspace\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+158-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\4ae0883b514c63882e15b052bac82f7c\workspace\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+159            </intent-filter>
+160            <intent-filter>
+160-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\4ae0883b514c63882e15b052bac82f7c\workspace\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+161                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+161-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\4ae0883b514c63882e15b052bac82f7c\workspace\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+161-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\4ae0883b514c63882e15b052bac82f7c\workspace\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+162            </intent-filter>
+163        </receiver>
+164
+165        <activity
+165-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\e5a02277d0a0c86e392fd1be1e319b23\workspace\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:47:9-53:63
+166            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+166-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\e5a02277d0a0c86e392fd1be1e319b23\workspace\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:48:13-74
+167            android:clearTaskOnLaunch="true"
+167-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\e5a02277d0a0c86e392fd1be1e319b23\workspace\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:49:13-45
+168            android:screenOrientation="sensorLandscape"
+168-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\e5a02277d0a0c86e392fd1be1e319b23\workspace\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:50:13-56
+169            android:stateNotNeeded="true"
+169-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\e5a02277d0a0c86e392fd1be1e319b23\workspace\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:51:13-42
+170            android:theme="@style/zxing_CaptureTheme"
+170-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\e5a02277d0a0c86e392fd1be1e319b23\workspace\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:52:13-54
+171            android:windowSoftInputMode="stateAlwaysHidden" />
+171-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ASUS\.gradle\caches\9.3.0\transforms\e5a02277d0a0c86e392fd1be1e319b23\workspace\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:53:13-60
+172    </application>
+173
+174</manifest>

@@ -1,0 +1,7 @@
+websockets>=12.0
+qrcode[pil]>=7.4
+pyperclip>=1.8
+Pillow>=10.0
+plyer>=2.1
+opencv-python>=4.9
+numpy>=1.26

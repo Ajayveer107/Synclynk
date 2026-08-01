@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_background">#FFFFFF</color>
+    <string name="app_name">SyncLynk</string>
+    <string name="status_connecting">Connecting to %1$s…</string>
+    <string name="status_disconnected">Disconnected</string>
+    <string name="status_not_connected">Not connected</string>
+    <string name="status_paired">Connected — clipboard, notifications, and camera ready</string>
+    <string name="status_rejected">Pairing rejected — rescan the QR code</string>
+    <style name="Theme.SyncLynk" parent="Theme.MaterialComponents.DayNight.NoActionBar"/>
+</resources>
